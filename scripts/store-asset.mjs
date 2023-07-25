@@ -8,8 +8,8 @@ const API_KEY = process.env.NFT_STORAGE_API_KEY;
 async function storeAsset() {
   const client = new NFTStorage({ token: API_KEY });
   const metadata = await client.store({
-    name: "Mona Lisa",
-    description: "Mona Lisa is an awesome artwork!",
+    name: "#name",
+    description: "#description",
     image: new File(
       [await fs.promises.readFile("assets/me.png")],
       "MeNft.png",
